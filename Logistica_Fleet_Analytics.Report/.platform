@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "Report",
+    "displayName": "Logistica_Fleet_Analytics"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "28b79532-7ecd-44a5-a586-841a6c0550ab"
+  }
+}
