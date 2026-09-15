@@ -1,0 +1,108 @@
+table fKMTraveled
+	lineageTag: 4f43e9fc-3482-404f-9afc-20372aa66996
+
+	column Date
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: 5221f7ae-c548-4a80-a6c9-787c0528b8e4
+		summarizeBy: none
+		sourceColumn: Date
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column 'Truck ID'
+		dataType: int64
+		formatString: 0
+		lineageTag: 0d035bf1-4752-442f-909d-154e2464d23b
+		summarizeBy: none
+		sourceColumn: Truck ID
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Drive ID'
+		dataType: int64
+		formatString: 0
+		lineageTag: bb1203b0-a27e-4f3c-abec-d8ac1169a442
+		summarizeBy: none
+		sourceColumn: Drive ID
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'KM Traveled'
+		dataType: int64
+		formatString: 0
+		lineageTag: e61484cf-b7fc-4f0a-84bf-aff9bce25ec0
+		summarizeBy: sum
+		sourceColumn: KM Traveled
+
+		annotation SummarizationSetBy = Automatic
+
+	column Liters
+		dataType: double
+		lineageTag: ed572f91-90e3-42fc-9fb9-eadccc9c84a6
+		summarizeBy: sum
+		sourceColumn: Liters
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column Fuel
+		dataType: double
+		lineageTag: 58e7a84e-c2e9-4ee8-b1d9-f1de1e6e4c2b
+		summarizeBy: sum
+		sourceColumn: Fuel
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column Maintenance
+		dataType: double
+		lineageTag: 70b2741d-fd1c-4326-8a71-e9df99363825
+		summarizeBy: sum
+		sourceColumn: Maintenance
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'Fixed Costs'
+		dataType: double
+		lineageTag: 1a91d621-053d-4782-9a09-51ed9ba5195f
+		summarizeBy: sum
+		sourceColumn: Fixed Costs
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'Month Name'
+		dataType: string
+		lineageTag: 2cdd87f8-2c86-4993-94d4-5188dd22ebac
+		summarizeBy: none
+		sourceColumn: Month Name
+
+		annotation SummarizationSetBy = Automatic
+
+	partition fKMTraveled = m
+		mode: import
+		source =
+				let
+				    Source = Excel.Workbook(File.Contents("D:\Logistica_Fleet_Analytics\Data_Sources\fCosts.xlsx"), null, true),
+				    fKMTraveled_Sheet = Source{[Item="fKMTraveled",Kind="Sheet"]}[Data],
+				    #"Changed Type" = Table.TransformColumnTypes(fKMTraveled_Sheet,{{"Column1", type any}, {"Column2", type any}, {"Column3", type any}, {"Column4", type any}, {"Column5", type any}, {"Column6", type any}, {"Column7", type any}, {"Column8", type any}}),
+				    #"Filtered Rows" = Table.SelectRows(#"Changed Type", each ([Column1] <> null and [Column1] <> 2018 and [Column1] <> 2019)),
+				    #"Promoted Headers" = Table.PromoteHeaders(#"Filtered Rows", [PromoteAllScalars=true]),
+				    #"Changed Type1" = Table.TransformColumnTypes(#"Promoted Headers",{{"Date", type date}, {"Truck ID", Int64.Type}, {"Drive ID", Int64.Type}, {"KM Traveled", Int64.Type}, {"Liters", type number}, {"Fuel", type number}, {"Maintenance", type number}, {"Fixed Costs", type number}}),
+				    #"Removed Errors" = Table.RemoveRowsWithErrors(#"Changed Type1"),
+				    #"Inserted Month Name" = Table.AddColumn(#"Removed Errors", "Month Name", each Date.MonthName([Date]), type text)
+				in
+				    #"Inserted Month Name"
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+

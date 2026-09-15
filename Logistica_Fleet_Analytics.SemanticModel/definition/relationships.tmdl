@@ -1,0 +1,29 @@
+relationship AutoDetected_d5f44ee5-70ea-40e5-a989-f1bd972f8be5
+	fromColumn: fFreight.'Customer ID'
+	toColumn: dCliente.'Customer ID'
+
+relationship AutoDetected_8b72c509-2e10-4048-9a79-55008dc33a4e
+	fromColumn: fKMTraveled.'Truck ID'
+	toColumn: dVeiculo.'Truck ID'
+
+relationship AutoDetected_47628490-77f8-4aa8-976d-f73c18dd6231
+	fromColumn: fFreight.'Truck ID'
+	toColumn: dVeiculo.'Truck ID'
+
+relationship 579f3645-e645-69e8-dd36-be8763a37152
+	fromColumn: fKMTraveled.'Drive ID'
+	toColumn: dMotorista.'Driver ID'
+
+relationship 89cb7c3b-dd87-49a3-ab85-2b8e99c001d0
+	joinOnDateBehavior: datePartOnly
+	fromColumn: Calendar.Date
+	toColumn: LocalDateTable_2a3f7094-3c1b-4763-b7df-622fc1cabc36.Date
+
+relationship 98b66a8f-9bb9-9448-d8f0-6fcd1bfd2af5
+	fromColumn: fKMTraveled.Date
+	toColumn: Calendar.Date
+
+relationship f7547a78-16e2-4ff2-dd16-0b0bc679c244
+	fromColumn: fFreight.Date
+	toColumn: Calendar.Date
+

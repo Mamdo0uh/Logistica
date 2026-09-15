@@ -1,0 +1,65 @@
+table dVeiculo
+	lineageTag: 1b22931b-80f8-43d1-8880-9a3e50405dd7
+
+	column 'Truck ID'
+		dataType: int64
+		formatString: 0
+		lineageTag: 015c4c9e-ed8a-4978-af34-5ab16da86ca8
+		summarizeBy: none
+		sourceColumn: Truck ID
+
+		annotation SummarizationSetBy = Automatic
+
+	column Plate
+		dataType: string
+		lineageTag: 21016084-ae6c-4df7-a611-67d66a924886
+		summarizeBy: none
+		sourceColumn: Plate
+
+		annotation SummarizationSetBy = Automatic
+
+	column Brand
+		dataType: string
+		lineageTag: 52cca9fb-d013-4573-a601-ec0dd8edd796
+		summarizeBy: none
+		sourceColumn: Brand
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Truck Type'
+		dataType: string
+		lineageTag: 3366e0bd-3e48-437a-a715-8da21abbf38f
+		summarizeBy: none
+		sourceColumn: Truck Type
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Trailers Type'
+		dataType: string
+		lineageTag: 2a1380f8-0200-4083-b989-227b7411e9c5
+		summarizeBy: none
+		sourceColumn: Trailers Type
+
+		annotation SummarizationSetBy = Automatic
+
+	column Year
+		dataType: int64
+		formatString: 0
+		lineageTag: 485f8477-a84f-496b-8d21-3f564791b602
+		summarizeBy: sum
+		sourceColumn: Year
+
+		annotation SummarizationSetBy = Automatic
+
+	partition dVeiculo = m
+		mode: import
+		source =
+				let
+				    Source = Excel.Workbook(File.Contents("D:\Logistica_Fleet_Analytics\Data_Sources\DimensionTables.xlsx"), null, true),
+				    dVeiculo_Table = Source{[Item="dVeiculo",Kind="Table"]}[Data],
+				    #"Changed Type" = Table.TransformColumnTypes(dVeiculo_Table,{{"Truck ID", Int64.Type}, {"Plate", type text}, {"Brand", type text}, {"Truck Type", type text}, {"Trailers Type", type text}, {"Year", Int64.Type}})
+				in
+				    #"Changed Type"
+
+	annotation PBI_ResultType = Table
+

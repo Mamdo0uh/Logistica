@@ -1,0 +1,113 @@
+{
+  "version": "1.1.0",
+  "diagrams": [
+    {
+      "ordinal": 0,
+      "scrollPosition": {
+        "x": 37.456138454261691,
+        "y": 0
+      },
+      "nodes": [
+        {
+          "location": {
+            "x": 0,
+            "y": 50
+          },
+          "nodeIndex": "dCliente",
+          "nodeLineageTag": "1b8dbcbb-4af0-4321-b1d5-186510e09452",
+          "size": {
+            "height": 200,
+            "width": 234
+          },
+          "zIndex": 1
+        },
+        {
+          "location": {
+            "x": 471.4413085827731,
+            "y": 0
+          },
+          "nodeIndex": "dMotorista",
+          "nodeLineageTag": "4488f707-e175-4ebc-ae2f-f9c162d79b6f",
+          "size": {
+            "height": 128,
+            "width": 234
+          },
+          "zIndex": 2
+        },
+        {
+          "location": {
+            "x": 1267.0292410304921,
+            "y": 8.4559988834333737
+          },
+          "nodeIndex": "dVeiculo",
+          "nodeLineageTag": "1b22931b-80f8-43d1-8880-9a3e50405dd7",
+          "size": {
+            "height": 236.68399832515007,
+            "width": 234
+          },
+          "zIndex": 4
+        },
+        {
+          "location": {
+            "x": 491.21071430684276,
+            "y": 398.8412806686074
+          },
+          "nodeIndex": "fFreight",
+          "nodeLineageTag": "ab91ada9-7cd4-466f-8f35-24b7acecc3c1",
+          "size": {
+            "height": 300,
+            "width": 234
+          },
+          "zIndex": 3
+        },
+        {
+          "location": {
+            "x": 1016.2066824846938,
+            "y": 472.71727117779108
+          },
+          "nodeIndex": "fKMTraveled",
+          "nodeLineageTag": "4f43e9fc-3482-404f-9afc-20372aa66996",
+          "size": {
+            "height": 296,
+            "width": 234
+          },
+          "zIndex": 5
+        },
+        {
+          "location": {
+            "x": 880.186662944778,
+            "y": 44.77200055828331
+          },
+          "nodeIndex": "Calendar",
+          "nodeLineageTag": "b5ce8a2a-e1ca-4a23-803d-72e890e47709",
+          "size": {
+            "height": 200,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 1551.0292410304921,
+            "y": 332.35863558889554
+          },
+          "nodeIndex": "1st calculations",
+          "nodeLineageTag": "6745aad5-054d-4fa6-af6b-dfddb491012e",
+          "size": {
+            "height": 104,
+            "width": 234
+          },
+          "zIndex": 0
+        }
+      ],
+      "name": "All tables",
+      "zoomValue": 70.95554390096882,
+      "pinKeyFieldsToTop": false,
+      "showExtraHeaderInfo": false,
+      "hideKeyFieldsWhenCollapsed": false,
+      "tablesLocked": false
+    }
+  ],
+  "selectedDiagram": "All tables",
+  "defaultDiagram": "All tables"
+}

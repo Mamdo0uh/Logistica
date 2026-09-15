@@ -1,0 +1,60 @@
+table dCliente
+	lineageTag: 1b8dbcbb-4af0-4321-b1d5-186510e09452
+
+	column 'Customer ID'
+		dataType: int64
+		formatString: 0
+		lineageTag: 51fdc93e-d3a7-40db-bb9c-3ff7c333382a
+		summarizeBy: none
+		sourceColumn: Customer ID
+
+		annotation SummarizationSetBy = Automatic
+
+	column City
+		dataType: string
+		lineageTag: f28cef70-345d-4770-b17c-9a4c2ac64d70
+		summarizeBy: none
+		sourceColumn: City
+
+		annotation SummarizationSetBy = Automatic
+
+	column State
+		dataType: string
+		lineageTag: 3c38d355-1fef-4726-a1c6-6cefbf140bc0
+		summarizeBy: none
+		sourceColumn: State
+
+		annotation SummarizationSetBy = Automatic
+
+	column Latitude
+		dataType: double
+		lineageTag: 91be6cd6-b621-4836-a05a-9e8694cbd114
+		summarizeBy: none
+		sourceColumn: Latitude
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column Longitude
+		dataType: double
+		lineageTag: 7220a8a7-6f98-4fa1-9677-6fc8c5aa9926
+		summarizeBy: none
+		sourceColumn: Longitude
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	partition dCliente = m
+		mode: import
+		source =
+				let
+				    Source = Excel.Workbook(File.Contents("D:\Logistica_Fleet_Analytics\Data_Sources\DimensionTables.xlsx"), null, true),
+				    dCliente_Table = Source{[Item="dCliente",Kind="Table"]}[Data],
+				    #"Changed Type" = Table.TransformColumnTypes(dCliente_Table,{{"Customer ID", Int64.Type}, {"City", type text}, {"State", type text}, {"Latitude", type number}, {"Longitude", type number}})
+				in
+				    #"Changed Type"
+
+	annotation PBI_ResultType = Table
+

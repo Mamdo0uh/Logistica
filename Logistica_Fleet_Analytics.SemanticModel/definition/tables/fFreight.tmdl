@@ -1,0 +1,107 @@
+table fFreight
+	lineageTag: ab91ada9-7cd4-466f-8f35-24b7acecc3c1
+
+	column Date
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: 9802e605-e363-47c9-95da-af6c494ed29c
+		summarizeBy: none
+		sourceColumn: Date
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column 'Customer ID'
+		dataType: int64
+		formatString: 0
+		lineageTag: 85e85fee-394c-48b7-b43a-0b3958666fe4
+		summarizeBy: none
+		sourceColumn: Customer ID
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Truck ID'
+		dataType: int64
+		formatString: 0
+		lineageTag: 75c35dcf-0abd-4c55-857d-d5e4ce71bf04
+		summarizeBy: none
+		sourceColumn: Truck ID
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Invoice Number'
+		dataType: int64
+		formatString: 0
+		lineageTag: f658b7e0-ef6b-4aa0-951e-159b6eec0316
+		summarizeBy: sum
+		sourceColumn: Invoice Number
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Freight ID'
+		dataType: string
+		lineageTag: 16f18c5f-dd8a-49e2-9e2d-c797736c6523
+		summarizeBy: none
+		sourceColumn: Freight ID
+
+		annotation SummarizationSetBy = Automatic
+
+	column City
+		dataType: string
+		lineageTag: 9d35a878-cb39-4443-80ad-ba89ec5d4c39
+		summarizeBy: none
+		sourceColumn: City
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Net Revenue'
+		dataType: int64
+		formatString: 0
+		lineageTag: d10c7b1b-2194-4600-b789-4f5dde048fc9
+		summarizeBy: sum
+		sourceColumn: Net Revenue
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Weight (Kg)'
+		dataType: int64
+		formatString: 0
+		lineageTag: fe5f995f-59e6-4074-a3ed-deddff3de90e
+		summarizeBy: sum
+		sourceColumn: Weight (Kg)
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Weight (Cubic)'
+		dataType: int64
+		formatString: 0
+		lineageTag: 24f273cc-1b2e-4488-9379-f8fffb733b59
+		summarizeBy: sum
+		sourceColumn: Weight (Cubic)
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Goods Value'
+		dataType: int64
+		formatString: 0
+		lineageTag: ddc5e1a7-a89c-497b-a78d-e0e912c98dc6
+		summarizeBy: sum
+		sourceColumn: Goods Value
+
+		annotation SummarizationSetBy = Automatic
+
+	partition fFreight = m
+		mode: import
+		source =
+				let
+				    Source = Csv.Document(File.Contents("D:\Logistica_Fleet_Analytics\Data_Sources\fFreight.csv"),[Delimiter=",", Columns=10, Encoding=1252, QuoteStyle=QuoteStyle.None]),
+				    #"Promoted Headers" = Table.PromoteHeaders(Source, [PromoteAllScalars=true]),
+				    #"Changed Type" = Table.TransformColumnTypes(#"Promoted Headers",{{"Date", type date}, {"Customer ID", Int64.Type}, {"Truck ID", Int64.Type}, {"Invoice Number", Int64.Type}, {"Freight ID", type text}, {"City", type text}, {"Net Revenue", Int64.Type}, {"Weight (Kg)", Int64.Type}, {"Weight (Cubic)", Int64.Type}, {"Goods Value", Int64.Type}})
+				in
+				    #"Changed Type"
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+

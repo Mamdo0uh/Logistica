@@ -1,0 +1,125 @@
+table '1st calculations'
+	lineageTag: 6745aad5-054d-4fa6-af6b-dfddb491012e
+
+	measure 'Net Revenue' = SUM(fFreight[Net Revenue])
+		formatString: \$#,0;(\$#,0);\$#,0
+		lineageTag: 7005bcd5-869e-48a7-b2df-a206dac86f09
+
+		annotation PBI_FormatHint = {"currencyCulture":"en-US"}
+
+	measure #orders = DISTINCTCOUNT(fFreight[Invoice Number])
+		formatString: #,0
+		lineageTag: c83eaed6-33bc-4acf-9272-3544e43f82a7
+
+	measure 'Weight (Ton)' = SUM(fFreight[Weight (Kg)])/1000
+		lineageTag: f48fbe5a-b0e2-4060-be56-d40e2c6b4d6f
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Goods Value' = SUM(fFreight[Goods Value])
+		formatString: \$#,0.###############;(\$#,0.###############);\$#,0.###############
+		lineageTag: 271070d3-cd75-4f73-8970-bf0d28f8cf33
+
+	measure 'YoY% NET Revenue' =
+			
+			var REVENUECURRENT=[Net Revenue]
+			VAR LYREV=CALCULATE([Net Revenue],SAMEPERIODLASTYEAR('Calendar'[Date]))
+			RETURN
+			IF(ISFILTERED('Calendar'),DIVIDE(REVENUECURRENT-LYREV,LYREV),"")
+		formatString: 0.00%;-0.00%;0.00%
+		lineageTag: 22294587-6f57-4c4f-a752-b794d17d6cfe
+
+	measure 'YoY% #ORDERS' =
+			
+			VAR ORDERSCURRENT = [#orders]
+			VAR LYORDERS =
+			    CALCULATE ( [#orders], SAMEPERIODLASTYEAR ( 'Calendar'[Date] ) )
+			RETURN
+			    IF (
+			        ISFILTERED ( 'Calendar'),
+			        DIVIDE ( ORDERSCURRENT - LYORDERS, LYORDERS ),
+			        ""
+			    )
+		formatString: 0.00%;-0.00%;0.00%
+		lineageTag: 397a1aec-0812-4692-8b08-7454b09d9ade
+
+	measure 'YoY% WEIGHT' =
+			
+			VAR WEIGHTCURRENT = [Weight (Ton)]
+			VAR LYWEIGHT =
+			    CALCULATE ( [Weight (Ton)], SAMEPERIODLASTYEAR ( 'Calendar'[Date] ) )
+			RETURN
+			    IF (
+			        ISFILTERED ( 'Calendar' ),
+			        DIVIDE ( [Weight (Ton)] - LYWEIGHT, LYWEIGHT ),
+			        ""
+			    )
+		formatString: 0.00%;-0.00%;0.00%
+		lineageTag: 012125c9-1cee-46db-bdbd-bd79fdc89aec
+
+	measure 'YoY% GOODS VALUE' =
+			
+			VAR GOODSCURRENT = [Goods Value]
+			VAR LYGOODS =
+			    CALCULATE ( [Goods Value], SAMEPERIODLASTYEAR ( 'Calendar'[Date] ) )
+			RETURN
+			    IF (
+			        ISFILTERED ( 'Calendar'),
+			        DIVIDE ( GOODSCURRENT - LYGOODS, LYGOODS ),
+			        ""
+			    )
+		formatString: 0.00%;-0.00%;0.00%
+		lineageTag: 2157f3bd-5fc5-4ffa-8c79-53136de77cd7
+
+	measure 'COLOR NET Revenue' =
+			
+			VAR REVENUECURRENT = [Net Revenue]
+			VAR LYREV =
+			    CALCULATE ( [Net Revenue], SAMEPERIODLASTYEAR ( 'Calendar'[Date] ) )
+			RETURN
+			    IF ( REVENUECURRENT - LYREV > 0, 1, 2 )
+		formatString: 0
+		lineageTag: 846cb8b9-8e0a-48b9-851c-239cc7ea1b8f
+
+	measure 'COLOR #ORDERS' =
+			
+			VAR ORDERSCURRENT = [#orders]
+			VAR LYORDERS =
+			    CALCULATE ( [#orders], SAMEPERIODLASTYEAR ( 'Calendar'[Date] ) )
+			RETURN
+			    IF (ORDERSCURRENT-LYORDERS>0,1,2)
+		formatString: 0
+		lineageTag: 8afad9c6-f01e-4a90-a8ef-167cd61a5e30
+
+	measure 'Color WEIGHT' =
+			
+			VAR WEIGHTCURRENT = [Weight (Ton)]
+			VAR LYWEIGHT =
+			    CALCULATE ( [Weight (Ton)], SAMEPERIODLASTYEAR ( 'Calendar'[Date] ) )
+			RETURN
+			    IF (WEIGHTCURRENT-LYWEIGHT>0,1,2)
+		formatString: 0
+		lineageTag: 9cfc5284-ac17-4877-bca3-9b2e202b6d74
+
+	measure 'COLOR GOODS VALUE' =
+			
+			VAR GOODSCURRENT = [Goods Value]
+			VAR LYGOODS =
+			    CALCULATE ( [Goods Value], SAMEPERIODLASTYEAR ( 'Calendar'[Date] ) )
+			RETURN
+			    IF (GOODSCURRENT-LYGOODS>0,1,2)
+		formatString: 0
+		lineageTag: c3c679e6-f23f-467f-b940-531bd40ed194
+
+	partition '1st calculations' = m
+		mode: import
+		source =
+				let
+				    Source = Table.FromRows(Json.Document(Binary.Decompress(Binary.FromText("i44FAA==", BinaryEncoding.Base64), Compression.Deflate)), let _t = ((type nullable text) meta [Serialized.Text = true]) in type table [Column1 = _t]),
+				    #"Changed Type" = Table.TransformColumnTypes(Source,{{"Column1", type text}}),
+				    #"Removed Columns" = Table.RemoveColumns(#"Changed Type",{"Column1"})
+				in
+				    #"Removed Columns"
+
+	annotation PBI_ResultType = Table
+

@@ -1,7 +1,7 @@
 model Model
 	culture: en-US
 	defaultPowerBIDataSourceVersion: powerBI_V3
-	sourceQueryCulture: ar-EG
+	sourceQueryCulture: en-US
 	valueFilterBehavior: independent
 	dataAccessOptions
 		legacyRedirects
@@ -10,6 +10,18 @@ model Model
 annotation __PBI_TimeIntelligenceEnabled = 1
 
 annotation PBI_ProTooling = ["DevMode"]
+
+annotation PBI_QueryOrder = ["dCliente","dMotorista","dVeiculo","fKMTraveled","fFreight","1st calculations"]
+
+ref table dCliente
+ref table dMotorista
+ref table dVeiculo
+ref table fKMTraveled
+ref table DateTableTemplate_dc9ec2f3-5012-4d2f-a0d0-2ed7e26c00ab
+ref table fFreight
+ref table Calendar
+ref table LocalDateTable_2a3f7094-3c1b-4763-b7df-622fc1cabc36
+ref table '1st calculations'
 
 ref cultureInfo en-US
 

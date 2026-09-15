@@ -1,0 +1,32 @@
+table dMotorista
+	lineageTag: 4488f707-e175-4ebc-ae2f-f9c162d79b6f
+
+	column 'Driver ID'
+		dataType: int64
+		formatString: 0
+		lineageTag: 761f904f-4067-4317-8a4b-b16b2a9bfcc1
+		summarizeBy: none
+		sourceColumn: Driver ID
+
+		annotation SummarizationSetBy = Automatic
+
+	column Driver
+		dataType: string
+		lineageTag: 0487fe3a-c411-443b-b4f7-2d9b4b8066f3
+		summarizeBy: none
+		sourceColumn: Driver
+
+		annotation SummarizationSetBy = Automatic
+
+	partition dMotorista = m
+		mode: import
+		source =
+				let
+				    Source = Excel.Workbook(File.Contents("D:\Logistica_Fleet_Analytics\Data_Sources\DimensionTables.xlsx"), null, true),
+				    dMotorista_Table = Source{[Item="dMotorista",Kind="Table"]}[Data],
+				    #"Changed Type" = Table.TransformColumnTypes(dMotorista_Table,{{"Driver ID", Int64.Type}, {"Driver", type text}})
+				in
+				    #"Changed Type"
+
+	annotation PBI_ResultType = Table
+
