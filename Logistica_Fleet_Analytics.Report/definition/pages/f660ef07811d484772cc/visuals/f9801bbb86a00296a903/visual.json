@@ -1,13 +1,13 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.11.0/schema.json",
-  "name": "0b238eb017c3b6add9c7",
+  "name": "f9801bbb86a00296a903",
   "position": {
-    "x": 745.82677165354323,
+    "x": 495.53805774278214,
     "y": 62.15223097112861,
-    "z": 2000,
+    "z": 1000,
     "height": 114.22572178477689,
     "width": 250.28871391076115,
-    "tabOrder": 2000
+    "tabOrder": 1000
   },
   "visual": {
     "visualType": "cardVisual",
@@ -20,14 +20,14 @@
                 "Measure": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "1st calculations"
+                      "Entity": "2nd calculations"
                     }
                   },
-                  "Property": "Weight (Ton)"
+                  "Property": "Cost per KM"
                 }
               },
-              "queryRef": "1st calculations.Weight (Ton)",
-              "nativeQueryRef": "Weight (Ton)"
+              "queryRef": "2nd calculations.Cost per KM",
+              "nativeQueryRef": "Cost per KM"
             }
           ]
         }
@@ -39,10 +39,10 @@
               "Measure": {
                 "Expression": {
                   "SourceRef": {
-                    "Entity": "1st calculations"
+                    "Entity": "2nd calculations"
                   }
                 },
-                "Property": "Weight (Ton)"
+                "Property": "Cost per KM"
               }
             },
             "direction": "Descending"
@@ -62,43 +62,6 @@
                 }
               }
             }
-          }
-        }
-      ],
-      "value": [
-        {
-          "properties": {
-            "horizontalAlignment": {
-              "expr": {
-                "Literal": {
-                  "Value": "'center'"
-                }
-              }
-            },
-            "fontSize": {
-              "expr": {
-                "Literal": {
-                  "Value": "25D"
-                }
-              }
-            }
-          },
-          "selector": {
-            "id": "default"
-          }
-        },
-        {
-          "properties": {
-            "labelPrecision": {
-              "expr": {
-                "Literal": {
-                  "Value": "2L"
-                }
-              }
-            }
-          },
-          "selector": {
-            "metadata": "1st calculations.Weight (Ton)"
           }
         }
       ],

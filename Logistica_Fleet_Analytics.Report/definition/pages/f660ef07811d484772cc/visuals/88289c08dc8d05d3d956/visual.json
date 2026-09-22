@@ -1,0 +1,75 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.11.0/schema.json",
+  "name": "88289c08dc8d05d3d956",
+  "position": {
+    "x": 889.92000000000007,
+    "y": 488.16,
+    "z": 7001,
+    "height": 231.84,
+    "width": 372.96000000000004,
+    "tabOrder": 7001
+  },
+  "visual": {
+    "visualType": "donutChart",
+    "query": {
+      "queryState": {
+        "Category": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "dVeiculo"
+                    }
+                  },
+                  "Property": "Trailers Type"
+                }
+              },
+              "queryRef": "dVeiculo.Trailers Type",
+              "nativeQueryRef": "Trailers Type",
+              "active": true
+            }
+          ]
+        },
+        "Y": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "2nd calculations"
+                    }
+                  },
+                  "Property": "Cost per KM"
+                }
+              },
+              "queryRef": "2nd calculations.Cost per KM",
+              "nativeQueryRef": "Cost per KM"
+            }
+          ]
+        }
+      },
+      "sortDefinition": {
+        "sort": [
+          {
+            "field": {
+              "Measure": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "2nd calculations"
+                  }
+                },
+                "Property": "Cost per KM"
+              }
+            },
+            "direction": "Descending"
+          }
+        ],
+        "isDefaultSort": true
+      }
+    },
+    "drillFilterOtherVisuals": true
+  }
+}

@@ -4,10 +4,10 @@
   "position": {
     "x": 495.53805774278214,
     "y": 62.15223097112861,
-    "z": 1,
+    "z": 1000,
     "height": 114.22572178477689,
     "width": 250.28871391076115,
-    "tabOrder": 1
+    "tabOrder": 1000
   },
   "visual": {
     "visualType": "cardVisual",
@@ -225,23 +225,5 @@
       ]
     },
     "drillFilterOtherVisuals": true
-  },
-  "filterConfig": {
-    "filters": [
-      {
-        "name": "5f6075087097568b535e",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "1st calculations"
-              }
-            },
-            "Property": "#orders"
-          }
-        },
-        "type": "Advanced"
-      }
-    ]
   }
 }

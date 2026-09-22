@@ -1,0 +1,81 @@
+table '2nd calculations'
+	lineageTag: 2c4ae4eb-f5d9-47a2-8493-6bf0d9bf1b84
+
+	measure 'Fixed Cost' = SUM(fKMTraveled[Fixed Costs])
+		formatString: \$#,0.###############;(\$#,0.###############);\$#,0.###############
+		lineageTag: 850b85ae-8cf6-4e16-a7f0-a3bc411e8ed0
+
+	measure 'Variable Cost' = SUM(fKMTraveled[Fuel]) + SUM(fKMTraveled[Maintenance])
+		formatString: \$#,0.###############;(\$#,0.###############);\$#,0.###############
+		lineageTag: 84fbc824-8640-47d6-b6ef-f33f2498f9b8
+
+	measure 'Total Cost' = [Variable Cost] + [Fixed Cost]
+		formatString: \$#,0.00;(\$#,0.00);\$#,0.00
+		lineageTag: 50df4630-d3dd-4efd-b9ae-79cb86e50f39
+
+		annotation PBI_FormatHint = {"currencyCulture":"en-US"}
+
+	measure 'KM TRAVILED' = SUM(fKMTraveled[KM Traveled])
+		formatString: 0
+		lineageTag: af01f151-421c-44b7-b3d3-a8aff374caff
+
+	measure 'Cost per KM' = DIVIDE([Total Cost], [KM TRAVILED], 0)
+		formatString: \$#,0.###############;(\$#,0.###############);\$#,0.###############
+		lineageTag: af0993fc-8db1-4186-beb1-cb990310cd33
+
+	measure 'Cost per Ton' = DIVIDE([Total Cost], [Weight (Ton)])
+		formatString: \$#,0.###############;(\$#,0.###############);\$#,0.###############
+		lineageTag: d6abd9db-97db-41c9-a117-893e3466db7a
+
+	measure '# Trucks used' = DISTINCTCOUNT(fKMTraveled[Truck ID])
+		formatString: 0
+		lineageTag: db822e49-6add-454f-af68-423bbc10ab96
+
+	measure 'Daily Costs' =
+			
+			VAR vQtyMonths = DISTINCTCOUNT(fKMTraveled[Date])
+			VAR vQtyWorkingDays = 22 * vQtyMonths
+			RETURN
+			DIVIDE([Total Cost], vQtyWorkingDays * [# Trucks used] , 0)
+		formatString: \$#,0.###############;(\$#,0.###############);\$#,0.###############
+		lineageTag: edb3de39-e0ad-47d3-b880-23732265c334
+
+	measure 'YoY% total cost' = ```
+			
+			VAR costCURRENT = [Total Cost]
+			VAR LYcost = 
+			    CALCULATE ( [Total Cost], SAMEPERIODLASTYEAR ( 'Calendar'[Date] ) )
+			RETURN
+			    IF (
+			        ISFILTERED ( 'Calendar' ),
+			        DIVIDE ( costCURRENT - LYcost, LYcost ),
+			        ""
+			    )
+			```
+		lineageTag: 7c8f5d1b-97c2-49a8-843a-4e9d4fc38f5c
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'COLORtotal cost' = ```
+			
+			VAR costCURRENT = [Total Cost]
+			VAR LYcost = 
+			    CALCULATE ( [Total Cost], SAMEPERIODLASTYEAR ( 'Calendar'[Date] ) )
+			RETURN
+			    IF ( costCURRENT - LYcost > 0, 1, 2 )
+			```
+		formatString: 0
+		lineageTag: 7a65eba1-83fc-4ea3-80b0-9933d4223f37
+
+	partition '2nd calculations' = m
+		mode: import
+		source =
+				let
+				    Source = Table.FromRows(Json.Document(Binary.Decompress(Binary.FromText("i44FAA==", BinaryEncoding.Base64), Compression.Deflate)), let _t = ((type nullable text) meta [Serialized.Text = true]) in type table [Column1 = _t]),
+				    #"Changed Type" = Table.TransformColumnTypes(Source,{{"Column1", type text}}),
+				    #"Removed Columns" = Table.RemoveColumns(#"Changed Type",{"Column1"})
+				in
+				    #"Removed Columns"
+
+	annotation PBI_ResultType = Table
+

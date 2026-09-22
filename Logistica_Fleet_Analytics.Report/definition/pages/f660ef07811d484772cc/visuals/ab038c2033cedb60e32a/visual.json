@@ -1,13 +1,13 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.11.0/schema.json",
-  "name": "04f239107840e8505271",
+  "name": "ab038c2033cedb60e32a",
   "position": {
-    "x": 245.249343832021,
+    "x": 996.11548556430444,
     "y": 62.15223097112861,
-    "z": 0,
+    "z": 3000,
     "height": 114.22572178477689,
     "width": 250.28871391076115,
-    "tabOrder": 0
+    "tabOrder": 3000
   },
   "visual": {
     "visualType": "cardVisual",
@@ -20,14 +20,14 @@
                 "Measure": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "1st calculations"
+                      "Entity": "2nd calculations"
                     }
                   },
-                  "Property": "Net Revenue"
+                  "Property": "# Trucks used"
                 }
               },
-              "queryRef": "1st calculations.Net Revenue",
-              "nativeQueryRef": "Net Revenue"
+              "queryRef": "2nd calculations.# Trucks used",
+              "nativeQueryRef": "# Trucks used"
             }
           ]
         }
@@ -39,10 +39,10 @@
               "Measure": {
                 "Expression": {
                   "SourceRef": {
-                    "Entity": "1st calculations"
+                    "Entity": "2nd calculations"
                   }
                 },
-                "Property": "Net Revenue"
+                "Property": "# Trucks used"
               }
             },
             "direction": "Descending"
@@ -52,38 +52,6 @@
       }
     },
     "objects": {
-      "outline": [
-        {
-          "properties": {
-            "show": {
-              "expr": {
-                "Literal": {
-                  "Value": "false"
-                }
-              }
-            }
-          },
-          "selector": {
-            "metadata": "1st calculations.Net Revenue"
-          }
-        }
-      ],
-      "divider": [
-        {
-          "properties": {
-            "show": {
-              "expr": {
-                "Literal": {
-                  "Value": "false"
-                }
-              }
-            }
-          },
-          "selector": {
-            "metadata": "1st calculations.Net Revenue"
-          }
-        }
-      ],
       "fillCustom": [
         {
           "properties": {
@@ -116,7 +84,39 @@
             }
           },
           "selector": {
-            "metadata": "1st calculations.Net Revenue"
+            "id": "default"
+          }
+        }
+      ],
+      "outline": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          },
+          "selector": {
+            "id": "default"
+          }
+        }
+      ],
+      "divider": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          },
+          "selector": {
+            "id": "default"
           }
         }
       ]

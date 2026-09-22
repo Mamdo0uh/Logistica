@@ -1,6 +1,6 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.11.0/schema.json",
-  "name": "33d72bd7a8e495e80974",
+  "name": "44905c3a00280a726861",
   "position": {
     "x": 266.15384615384613,
     "y": 201.53846153846152,
@@ -39,14 +39,28 @@
                 "Measure": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "1st calculations"
+                      "Entity": "2nd calculations"
                     }
                   },
-                  "Property": "Net Revenue"
+                  "Property": "Fixed Cost"
                 }
               },
-              "queryRef": "1st calculations.Net Revenue",
-              "nativeQueryRef": "Net Revenue"
+              "queryRef": "2nd calculations.Fixed Cost",
+              "nativeQueryRef": "Fixed Cost"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "2nd calculations"
+                    }
+                  },
+                  "Property": "Variable Cost"
+                }
+              },
+              "queryRef": "2nd calculations.Variable Cost",
+              "nativeQueryRef": "Variable Cost"
             }
           ]
         }

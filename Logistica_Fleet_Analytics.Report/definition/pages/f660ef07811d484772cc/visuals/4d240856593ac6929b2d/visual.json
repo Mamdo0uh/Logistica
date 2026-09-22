@@ -1,6 +1,6 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.11.0/schema.json",
-  "name": "4c32e1e2235a59a0814e",
+  "name": "4d240856593ac6929b2d",
   "position": {
     "x": 266,
     "y": 445,
@@ -10,7 +10,7 @@
     "tabOrder": 7000
   },
   "visual": {
-    "visualType": "columnChart",
+    "visualType": "ribbonChart",
     "query": {
       "queryState": {
         "Category": {
@@ -47,6 +47,24 @@
             }
           ]
         },
+        "Series": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "dVeiculo"
+                    }
+                  },
+                  "Property": "Truck Type"
+                }
+              },
+              "queryRef": "dVeiculo.Truck Type",
+              "nativeQueryRef": "Truck Type"
+            }
+          ]
+        },
         "Y": {
           "projections": [
             {
@@ -54,14 +72,14 @@
                 "Measure": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "1st calculations"
+                      "Entity": "2nd calculations"
                     }
                   },
-                  "Property": "#orders"
+                  "Property": "Cost per KM"
                 }
               },
-              "queryRef": "1st calculations.#orders",
-              "nativeQueryRef": "#orders"
+              "queryRef": "2nd calculations.Cost per KM",
+              "nativeQueryRef": "Cost per KM"
             }
           ]
         }
