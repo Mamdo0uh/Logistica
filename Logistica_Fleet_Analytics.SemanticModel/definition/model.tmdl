@@ -11,7 +11,7 @@ annotation __PBI_TimeIntelligenceEnabled = 1
 
 annotation PBI_ProTooling = ["DevMode"]
 
-annotation PBI_QueryOrder = ["dCliente","dMotorista","dVeiculo","fKMTraveled","fFreight","1st calculations","2nd calculations"]
+annotation PBI_QueryOrder = ["dCliente","dMotorista","dVeiculo","fKMTraveled","fFreight","1st calculations","2nd calculations","3rd calculations"]
 
 ref table dCliente
 ref table dMotorista
@@ -23,6 +23,7 @@ ref table Calendar
 ref table LocalDateTable_2a3f7094-3c1b-4763-b7df-622fc1cabc36
 ref table '1st calculations'
 ref table '2nd calculations'
+ref table '3rd calculations'
 
 ref cultureInfo en-US
 

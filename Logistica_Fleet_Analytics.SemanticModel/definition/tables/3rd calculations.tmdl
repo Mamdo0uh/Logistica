@@ -1,0 +1,40 @@
+table '3rd calculations'
+	lineageTag: 3470c860-886a-4ab9-9194-76b5f4331f6a
+
+	measure 'Financial Result' =
+			
+			[Net Revenue] - [Total Cost]
+		formatString: \$#,0.###############;(\$#,0.###############);\$#,0.###############
+		lineageTag: 2efcca16-0e02-45d5-bb49-6feba9cf1026
+
+	measure 'Profit Margin' =
+			
+			DIVIDE([Financial Result] , [Net Revenue])
+		formatString: #,0.00%;-#,0.00%;#,0.00%
+		lineageTag: 699a7bfe-8021-4fb2-866f-614367130ad8
+
+	measure ATP = DIVIDE([Goods Value],[#orders])
+		formatString: \$#,0.###############;(\$#,0.###############);\$#,0.###############
+		lineageTag: 0f26472e-ea3b-4598-b7d2-f3d68450b2fd
+
+	measure Revenue/Ton = DIVIDE([Net Revenue],[Weight (Ton)])
+		formatString: \$#,0.###############;(\$#,0.###############);\$#,0.###############
+		lineageTag: 6f9d0607-76cf-4a1b-9553-b7beefcc7338
+
+	measure PROFIT/ton = DIVIDE([Financial Result],[Weight (Ton)])
+		lineageTag: 84c90f91-8014-4177-a650-a8a97b444dc1
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	partition '3rd calculations' = m
+		mode: import
+		source =
+				let
+				    Source = Table.FromRows(Json.Document(Binary.Decompress(Binary.FromText("i44FAA==", BinaryEncoding.Base64), Compression.Deflate)), let _t = ((type nullable text) meta [Serialized.Text = true]) in type table [Column1 = _t]),
+				    #"Changed Type" = Table.TransformColumnTypes(Source,{{"Column1", type text}}),
+				    #"Removed Columns" = Table.RemoveColumns(#"Changed Type",{"Column1"})
+				in
+				    #"Removed Columns"
+
+	annotation PBI_ResultType = Table
+
