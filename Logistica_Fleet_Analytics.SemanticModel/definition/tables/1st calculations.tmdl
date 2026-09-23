@@ -2,10 +2,8 @@ table '1st calculations'
 	lineageTag: 6745aad5-054d-4fa6-af6b-dfddb491012e
 
 	measure 'Net Revenue' = SUM(fFreight[Net Revenue])
-		formatString: \$#,0;(\$#,0);\$#,0
+		formatString: \$#,0.###############;(\$#,0.###############);\$#,0.###############
 		lineageTag: 7005bcd5-869e-48a7-b2df-a206dac86f09
-
-		annotation PBI_FormatHint = {"currencyCulture":"en-US"}
 
 	measure #orders = DISTINCTCOUNT(fFreight[Invoice Number])
 		formatString: #,0

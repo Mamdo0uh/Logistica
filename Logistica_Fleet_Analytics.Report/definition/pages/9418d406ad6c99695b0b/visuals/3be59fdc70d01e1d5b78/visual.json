@@ -2,11 +2,11 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.11.0/schema.json",
   "name": "3be59fdc70d01e1d5b78",
   "position": {
-    "x": 495.53805774278214,
-    "y": 62.15223097112861,
-    "z": 1000,
-    "height": 114.22572178477689,
-    "width": 250.28871391076115,
+    "x": 514.08,
+    "y": 96.48,
+    "z": 5000,
+    "height": 95.04,
+    "width": 211.68,
     "tabOrder": 1000
   },
   "visual": {
@@ -27,7 +27,8 @@
                 }
               },
               "queryRef": "1st calculations.#orders",
-              "nativeQueryRef": "#orders"
+              "nativeQueryRef": "Orders",
+              "displayName": "Orders"
             }
           ]
         }
@@ -58,7 +59,7 @@
             "show": {
               "expr": {
                 "Literal": {
-                  "Value": "true"
+                  "Value": "false"
                 }
               }
             }
@@ -100,6 +101,24 @@
           "selector": {
             "metadata": "1st calculations.#orders"
           }
+        },
+        {
+          "properties": {
+            "fontColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "'#FFFFFF'"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "selector": {
+            "id": "default"
+          }
         }
       ],
       "outline": [
@@ -131,6 +150,62 @@
           },
           "selector": {
             "id": "default"
+          }
+        }
+      ],
+      "layout": [
+        {
+          "properties": {
+            "backgroundShow": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          },
+          "selector": {
+            "id": "default"
+          }
+        }
+      ],
+      "label": [
+        {
+          "properties": {
+            "fontColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "ThemeDataColor": {
+                      "ColorId": 0,
+                      "Percent": -0.2
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "selector": {
+            "id": "default"
+          }
+        },
+        {
+          "properties": {
+            "fontColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "ThemeDataColor": {
+                      "ColorId": 0,
+                      "Percent": -0.2
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "1st calculations.#orders"
           }
         }
       ]
@@ -196,7 +271,7 @@
             "show": {
               "expr": {
                 "Literal": {
-                  "Value": "true"
+                  "Value": "false"
                 }
               }
             },

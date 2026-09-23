@@ -50,6 +50,22 @@
           "type": "BaseTheme"
         }
       ]
+    },
+    {
+      "name": "RegisteredResources",
+      "type": "RegisteredResources",
+      "items": [
+        {
+          "name": "david-barajas-RIQyCVb5IQY-unsp43534316181593624.jpg",
+          "path": "david-barajas-RIQyCVb5IQY-unsp43534316181593624.jpg",
+          "type": "Image"
+        },
+        {
+          "name": "frontal-truck_(1)6740786599949208.png",
+          "path": "frontal-truck_(1)6740786599949208.png",
+          "type": "Image"
+        }
+      ]
     }
   ],
   "settings": {
