@@ -34,18 +34,22 @@ The project relies on a robust **Star Schema** linking fact tables and dimension
 
 ### 1. Overview & Navigation
 Main navigation interface to control and access different sections of the dashboard:
+
 ![Overview](Screenshots/overview.png)
 
 ### 2. Revenue Analysis
 Tracking revenue, transported weight, and order volume across cities and months:
+
 ![Revenue Analysis](Screenshots/revenue_analysis.png)
 
 ### 3. Cost Analysis
 Breakdown of fixed/variable costs, maintenance expenses, and operational cost per kilometer (Cost/KM):
+
 ![Cost Analysis](Screenshots/cost_analysis.png)
 
 ### 4. Vehicles & Profitability Analysis
 Evaluating fleet performance, profit margins per vehicle type, and net profitability:
+
 ![Vehicles Analysis](Screenshots/vehicles_analysis.png)
 
 ## 📊 Key Performance Indicators (KPIs)
