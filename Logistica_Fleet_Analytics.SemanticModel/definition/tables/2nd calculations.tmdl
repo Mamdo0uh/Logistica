@@ -16,7 +16,7 @@ table '2nd calculations'
 		annotation PBI_FormatHint = {"currencyCulture":"en-US"}
 
 	measure 'KM TRAVILED' = SUM(fKMTraveled[KM Traveled])
-		formatString: 0
+		formatString: #,0
 		lineageTag: af01f151-421c-44b7-b3d3-a8aff374caff
 
 	measure 'Cost per KM' = DIVIDE([Total Cost], [KM TRAVILED], 0)
@@ -52,9 +52,8 @@ table '2nd calculations'
 			        ""
 			    )
 			```
+		formatString: 0.00%;-0.00%;0.00%
 		lineageTag: 7c8f5d1b-97c2-49a8-843a-4e9d4fc38f5c
-
-		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
 	measure 'COLORtotal cost' = ```
 			
@@ -66,6 +65,91 @@ table '2nd calculations'
 			```
 		formatString: 0
 		lineageTag: 7a65eba1-83fc-4ea3-80b0-9933d4223f37
+
+	measure 'YoY% cost per KM' = ```
+			
+			VAR costCURRENT = [Cost per KM]
+			VAR LYcost = 
+			    CALCULATE ( [Cost per KM], SAMEPERIODLASTYEAR ( 'Calendar'[Date] ) )
+			RETURN
+			    IF (
+			        ISFILTERED ( 'Calendar' ),
+			        DIVIDE ( costCURRENT - LYcost, LYcost ),
+			        ""
+			    )
+			```
+		formatString: 0.00%;-0.00%;0.00%
+		lineageTag: 8cf953ae-bac5-48fd-bccc-078c57e57f16
+
+	measure 'YoY% cost per ton' = ```
+			
+			VAR costCURRENT = [Cost per Ton]
+			VAR LYcost = 
+			    CALCULATE ( [Cost per Ton], SAMEPERIODLASTYEAR ( 'Calendar'[Date] ) )
+			RETURN
+			    IF (
+			        ISFILTERED ( 'Calendar' ),
+			        DIVIDE ( costCURRENT - LYcost, LYcost ),
+			        ""
+			    )
+			```
+		formatString: 0.00%;-0.00%;0.00%
+		lineageTag: a7e5fcc3-e533-4fb0-b6a3-1789c54d3523
+
+	measure 'YoY% Trucks Used' = ```
+			
+			VAR costCURRENT = [# Trucks used]
+			VAR LYcost = 
+			    CALCULATE ( [# Trucks used], SAMEPERIODLASTYEAR ( 'Calendar'[Date] ) )
+			RETURN
+			    IF (
+			        ISFILTERED ( 'Calendar' ),
+			        DIVIDE ( costCURRENT - LYcost, LYcost ),
+			        ""
+			    )
+			```
+		formatString: 0.00%;-0.00%;0.00%
+		lineageTag: 672375d9-03c3-4b42-b0f0-fb9239d5ed35
+
+	measure 'COLOR total cost' =
+			
+			VAR REVENUECURRENT = [Total Cost]
+			VAR LYREV =
+			    CALCULATE ( [Total Cost], SAMEPERIODLASTYEAR ( 'Calendar'[Date] ) )
+			RETURN
+			    IF ( REVENUECURRENT - LYREV > 0, 1, 2 )
+		formatString: 0
+		lineageTag: 696007a2-82e5-405d-85ab-846722ad5eb3
+
+	measure 'COLOR Cost per KM' =
+			
+			VAR REVENUECURRENT = [Cost per KM]
+			VAR LYREV =
+			    CALCULATE ( [Cost per KM], SAMEPERIODLASTYEAR ( 'Calendar'[Date] ) )
+			RETURN
+			    IF ( REVENUECURRENT - LYREV > 0, 1, 2 )
+		formatString: 0
+		lineageTag: f61c2d3f-bde5-4d77-9456-ac82446ea97d
+
+	measure 'COLOR Cost per ton' =
+			
+			VAR REVENUECURRENT = [Cost per Ton]
+			VAR LYREV =
+			    CALCULATE ( [Cost per Ton], SAMEPERIODLASTYEAR ( 'Calendar'[Date] ) )
+			RETURN
+			    IF ( REVENUECURRENT - LYREV > 0, 1, 2 )
+		formatString: 0
+		lineageTag: 0acf2ee3-3562-4777-9071-73f1614ab512
+
+	measure 'COLOR Trucks Used' =
+			
+			VAR REVENUECURRENT = [# Trucks used]
+			VAR LYREV =
+			    CALCULATE ( [# Trucks used], SAMEPERIODLASTYEAR ( 'Calendar'[Date] ) )
+			RETURN
+			    IF ( REVENUECURRENT - LYREV > 0, 1, 2 )
+		formatString: 0
+		lineageTag: aae0bcdd-6864-46d2-b520-25fc533f5ce1
 
 	partition '2nd calculations' = m
 		mode: import

@@ -5742,6 +5742,16 @@ cultureInfo en-US
 			            },
 			            "Weight": 0.492
 			          }
+			        },
+			        {
+			          "Trucks used": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
 			        }
 			      ]
 			    },
@@ -5979,6 +5989,16 @@ cultureInfo en-US
 			              "Agent": "Thesaurus"
 			            },
 			            "Weight": 0.489
+			          }
+			        },
+			        {
+			          "Var from LY": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
 			          }
 			        }
 			      ]
@@ -6745,9 +6765,2332 @@ cultureInfo en-US
 			          }
 			        }
 			      ]
+			    },
+			    "entity_2nd_calculation.YoY_cost_per_KM": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "2nd calculations",
+			          "ConceptualProperty": "YoY% cost per KM"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "YoY% cost per KM": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "yoy percentage cost per km": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.624
+			          }
+			        },
+			        {
+			          "yoy pct cost per km": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.605
+			          }
+			        },
+			        {
+			          "yoy% price per km": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.504
+			          }
+			        },
+			        {
+			          "yoy% charge per km": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.504
+			          }
+			        },
+			        {
+			          "yoy% rate per km": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.504
+			          }
+			        },
+			        {
+			          "yoy% fee per km": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.504
+			          }
+			        },
+			        {
+			          "yoy% total per km": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.504
+			          }
+			        },
+			        {
+			          "yoy% expenditure per km": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.494
+			          }
+			        },
+			        {
+			          "yoy% budget per km": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.479
+			          }
+			        },
+			        {
+			          "yoy% amount per km": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.479
+			          }
+			        },
+			        {
+			          "Var from LY": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "entity_2nd_calculation.YoY_cost_per_ton": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "2nd calculations",
+			          "ConceptualProperty": "YoY% cost per ton"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "YoY% cost per ton": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "yoy percentage cost per ton": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.624
+			          }
+			        },
+			        {
+			          "yoy pct cost per ton": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.605
+			          }
+			        },
+			        {
+			          "yoy% price per ton": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.504
+			          }
+			        },
+			        {
+			          "yoy% charge per ton": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.504
+			          }
+			        },
+			        {
+			          "yoy% rate per ton": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.504
+			          }
+			        },
+			        {
+			          "yoy% fee per ton": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.504
+			          }
+			        },
+			        {
+			          "yoy% total per ton": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.504
+			          }
+			        },
+			        {
+			          "yoy% expenditure per ton": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.494
+			          }
+			        },
+			        {
+			          "yoy% budget per ton": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.479
+			          }
+			        },
+			        {
+			          "yoy% amount per ton": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.479
+			          }
+			        },
+			        {
+			          "Var from LY": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "entity_2nd_calculation.YoY_trucks_used": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "2nd calculations",
+			          "ConceptualProperty": "YoY% Trucks Used"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "YoY% trucks used": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "yoy percentage truck used": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.617
+			          }
+			        },
+			        {
+			          "yoy pct truck used": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.599
+			          }
+			        },
+			        {
+			          "yoy% car used": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.514
+			          }
+			        },
+			        {
+			          "yoy% lorry used": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.514
+			          }
+			        },
+			        {
+			          "yoy% HGV used": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.514
+			          }
+			        },
+			        {
+			          "yoy% bus used": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.499
+			          }
+			        },
+			        {
+			          "yoy% van used": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.499
+			          }
+			        },
+			        {
+			          "yoy% automobile used": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.499
+			          }
+			        },
+			        {
+			          "yoy% wagon used": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.499
+			          }
+			        },
+			        {
+			          "Var from LY": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "entity_2nd_calculation.COLOR_total_cost": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "2nd calculations",
+			          "ConceptualProperty": "COLOR total cost"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "COLOR total cost": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "cost": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "color aggregate cost": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.591
+			          }
+			        },
+			        {
+			          "color overall cost": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.591
+			          }
+			        },
+			        {
+			          "color total price": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.492
+			          }
+			        },
+			        {
+			          "color total charge": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.492
+			          }
+			        },
+			        {
+			          "color total rate": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.492
+			          }
+			        },
+			        {
+			          "color total fee": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.492
+			          }
+			        },
+			        {
+			          "color total total": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.492
+			          }
+			        },
+			        {
+			          "color total expenditure": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.482
+			          }
+			        },
+			        {
+			          "price": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "charge": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        }
+			      ]
+			    },
+			    "entity_2nd_calculation.COLOR_cost_per_KM": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "2nd calculations",
+			          "ConceptualProperty": "COLOR Cost per KM"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "COLOR cost per KM": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "cost": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "COLOR cost": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "color price per km": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.499
+			          }
+			        },
+			        {
+			          "color charge per km": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.499
+			          }
+			        },
+			        {
+			          "color rate per km": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.499
+			          }
+			        },
+			        {
+			          "color fee per km": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.499
+			          }
+			        },
+			        {
+			          "color total per km": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.499
+			          }
+			        },
+			        {
+			          "color expenditure per km": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.489
+			          }
+			        },
+			        {
+			          "color price": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "color charge": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "color rate": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "color fee": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        }
+			      ]
+			    },
+			    "entity_2nd_calculation.COLOR_cost_per_ton": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "2nd calculations",
+			          "ConceptualProperty": "COLOR Cost per ton"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "COLOR cost per ton": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "cost": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "COLOR cost": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "color price per ton": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.499
+			          }
+			        },
+			        {
+			          "color charge per ton": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.499
+			          }
+			        },
+			        {
+			          "color rate per ton": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.499
+			          }
+			        },
+			        {
+			          "color fee per ton": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.499
+			          }
+			        },
+			        {
+			          "color total per ton": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.499
+			          }
+			        },
+			        {
+			          "color expenditure per ton": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.489
+			          }
+			        },
+			        {
+			          "color price": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "color charge": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "color rate": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "color fee": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        }
+			      ]
+			    },
+			    "entity_2nd_calculation.COLOR_trucks_used": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "2nd calculations",
+			          "ConceptualProperty": "COLOR Trucks Used"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "COLOR trucks used": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "color car used": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.508
+			          }
+			        },
+			        {
+			          "color lorry used": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.508
+			          }
+			        },
+			        {
+			          "color HGV used": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.508
+			          }
+			        },
+			        {
+			          "color bus used": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.492
+			          }
+			        },
+			        {
+			          "color van used": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.492
+			          }
+			        },
+			        {
+			          "color automobile used": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.492
+			          }
+			        },
+			        {
+			          "color wagon used": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.492
+			          }
+			        }
+			      ]
+			    },
+			    "entity_3rd_calculation.qty_delivery": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "3rd calculations",
+			          "ConceptualProperty": "Qty Delivery"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "qty delivery": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "qty distribution": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "qty conveyance": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "qty carriage": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "qty transfer": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "qty transport": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "qty sending": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "qty provision": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "qty supply": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "qty liberation": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.475
+			          }
+			        },
+			        {
+			          "qty relief": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.475
+			          }
+			        }
+			      ]
+			    },
+			    "entity_3rd_calculation.YoY_profit": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "3rd calculations",
+			          "ConceptualProperty": "YoY% Profit"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "YoY% profit": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "yoy percentage profit": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.609
+			          }
+			        },
+			        {
+			          "yoy pct profit": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.591
+			          }
+			        },
+			        {
+			          "yoy% income": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.508
+			          }
+			        },
+			        {
+			          "yoy% revenue": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.508
+			          }
+			        },
+			        {
+			          "yoy% turnover": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.492
+			          }
+			        },
+			        {
+			          "yoy% return": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.492
+			          }
+			        },
+			        {
+			          "yoy% yield": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.492
+			          }
+			        },
+			        {
+			          "yoy% advantage": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.468
+			          }
+			        },
+			        {
+			          "yoy% gain": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.468
+			          }
+			        },
+			        {
+			          "yoy% benefit": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.468
+			          }
+			        },
+			        {
+			          "Var from LY": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "entity_3rd_calculation.YoY_QTY": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "3rd calculations",
+			          "ConceptualProperty": "YoY% QTY"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "YoY% QTY": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "yoy percentage qty": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.609
+			          }
+			        },
+			        {
+			          "yoy pct qty": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.591
+			          }
+			        },
+			        {
+			          "Var from LY": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "entity_3rd_calculation.YoY_KM_TRAVELED": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "3rd calculations",
+			          "ConceptualProperty": "YoY% KM TRAVELED"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "YoY% KM TRAVELED": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "yoy percentage km traveled": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.617
+			          }
+			        },
+			        {
+			          "yoy pct km traveled": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.599
+			          }
+			        },
+			        {
+			          "Var from LY": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "entity_3rd_calculation.YoY_WEIGHT_DELIVERED": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "3rd calculations",
+			          "ConceptualProperty": "YoY% WEIGHT DELIVERED"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "YoY% WEIGHT DELIVERED": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "yoy percentage weight delivered": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.617
+			          }
+			        },
+			        {
+			          "yoy pct weight delivered": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.599
+			          }
+			        },
+			        {
+			          "yoy% heaviness delivered": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.514
+			          }
+			        },
+			        {
+			          "yoy% weightiness delivered": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.514
+			          }
+			        },
+			        {
+			          "yoy% mass delivered": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.499
+			          }
+			        },
+			        {
+			          "yoy% bulk delivered": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.499
+			          }
+			        },
+			        {
+			          "yoy% heft delivered": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.499
+			          }
+			        },
+			        {
+			          "yoy% encumbrance delivered": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.489
+			          }
+			        },
+			        {
+			          "yoy% burden delivered": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.474
+			          }
+			        },
+			        {
+			          "yoy% load delivered": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.474
+			          }
+			        },
+			        {
+			          "Var from LY": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "entity_3rd_calculation.color_profit": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "3rd calculations",
+			          "ConceptualProperty": "COLOR PROFIT"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "color profit": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "color income": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "color revenue": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "color turnover": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "color return": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "color yield": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "color advantage": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.461
+			          }
+			        },
+			        {
+			          "color gain": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.461
+			          }
+			        },
+			        {
+			          "color benefit": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.461
+			          }
+			        },
+			        {
+			          "color use": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.461
+			          }
+			        },
+			        {
+			          "color reward": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.461
+			          }
+			        }
+			      ]
+			    },
+			    "entity_3rd_calculation.color_qty_traveled": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "3rd calculations",
+			          "ConceptualProperty": "COLOR QTY TRAVELED"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "color qty traveled": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "entity_3rd_calculation.color_km_traveled": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "3rd calculations",
+			          "ConceptualProperty": "COLOR KM TRAVELED"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "color km traveled": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "entity_3rd_calculation.color_weghit_traveled": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "3rd calculations",
+			          "ConceptualProperty": "COLOR WEGHIT TRAVELED"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "color weghit traveled": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
 			    }
 			  },
 			  "Relationships": {
+			    "f_freight_has_entity_3rd_calculation_color_profit": {
+			      "Binding": {
+			        "ConceptualEntity": "fFreight"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "f_freight": {
+			          "Target": {
+			            "Entity": "f_freight"
+			          }
+			        },
+			        "entity_3rd_calculation.color_profit": {
+			          "Target": {
+			            "Entity": "entity_3rd_calculation.color_profit"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "f_freight"
+			            },
+			            "Object": {
+			              "Role": "entity_3rd_calculation.color_profit"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "f_freights_have_color_profit"
+			        }
+			      ]
+			    },
+			    "f_freight_has_entity_3rd_calculation_YoY_WEIGHT_DELIVERED": {
+			      "Binding": {
+			        "ConceptualEntity": "fFreight"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "f_freight": {
+			          "Target": {
+			            "Entity": "f_freight"
+			          }
+			        },
+			        "entity_3rd_calculation.YoY_WEIGHT_DELIVERED": {
+			          "Target": {
+			            "Entity": "entity_3rd_calculation.YoY_WEIGHT_DELIVERED"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "f_freight"
+			            },
+			            "Object": {
+			              "Role": "entity_3rd_calculation.YoY_WEIGHT_DELIVERED"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "f_freights_have_YoY_WEIGHT_DELIVERED"
+			        }
+			      ]
+			    },
+			    "calendar_has_entity_3rd_calculation_YoY_WEIGHT_DELIVERED": {
+			      "Binding": {
+			        "ConceptualEntity": "Calendar"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "calendar": {
+			          "Target": {
+			            "Entity": "calendar"
+			          }
+			        },
+			        "entity_3rd_calculation.YoY_WEIGHT_DELIVERED": {
+			          "Target": {
+			            "Entity": "entity_3rd_calculation.YoY_WEIGHT_DELIVERED"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "calendar"
+			            },
+			            "Object": {
+			              "Role": "entity_3rd_calculation.YoY_WEIGHT_DELIVERED"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "calendars_have_YoY_WEIGHT_DELIVERED"
+			        }
+			      ]
+			    },
+			    "f_KM_traveled_has_entity_3rd_calculation_YoY_KM_TRAVELED": {
+			      "Binding": {
+			        "ConceptualEntity": "fKMTraveled"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "f_KM_traveled": {
+			          "Target": {
+			            "Entity": "f_KM_traveled"
+			          }
+			        },
+			        "entity_3rd_calculation.YoY_KM_TRAVELED": {
+			          "Target": {
+			            "Entity": "entity_3rd_calculation.YoY_KM_TRAVELED"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "f_KM_traveled"
+			            },
+			            "Object": {
+			              "Role": "entity_3rd_calculation.YoY_KM_TRAVELED"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "f_KM_traveled_have_YoY_KM_TRAVELED"
+			        }
+			      ]
+			    },
+			    "calendar_has_entity_3rd_calculation_YoY_KM_TRAVELED": {
+			      "Binding": {
+			        "ConceptualEntity": "Calendar"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "calendar": {
+			          "Target": {
+			            "Entity": "calendar"
+			          }
+			        },
+			        "entity_3rd_calculation.YoY_KM_TRAVELED": {
+			          "Target": {
+			            "Entity": "entity_3rd_calculation.YoY_KM_TRAVELED"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "calendar"
+			            },
+			            "Object": {
+			              "Role": "entity_3rd_calculation.YoY_KM_TRAVELED"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "calendars_have_YoY_KM_TRAVELED"
+			        }
+			      ]
+			    },
+			    "f_freight_has_entity_3rd_calculation_YoY_QTY": {
+			      "Binding": {
+			        "ConceptualEntity": "fFreight"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "f_freight": {
+			          "Target": {
+			            "Entity": "f_freight"
+			          }
+			        },
+			        "entity_3rd_calculation.YoY_QTY": {
+			          "Target": {
+			            "Entity": "entity_3rd_calculation.YoY_QTY"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "f_freight"
+			            },
+			            "Object": {
+			              "Role": "entity_3rd_calculation.YoY_QTY"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "f_freights_have_YoY_QTY"
+			        }
+			      ]
+			    },
+			    "calendar_has_entity_3rd_calculation_YoY_QTY": {
+			      "Binding": {
+			        "ConceptualEntity": "Calendar"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "calendar": {
+			          "Target": {
+			            "Entity": "calendar"
+			          }
+			        },
+			        "entity_3rd_calculation.YoY_QTY": {
+			          "Target": {
+			            "Entity": "entity_3rd_calculation.YoY_QTY"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "calendar"
+			            },
+			            "Object": {
+			              "Role": "entity_3rd_calculation.YoY_QTY"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "calendars_have_YoY_QTY"
+			        }
+			      ]
+			    },
+			    "f_KM_traveled_has_entity_3rd_calculation_YoY_profit": {
+			      "Binding": {
+			        "ConceptualEntity": "fKMTraveled"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "f_KM_traveled": {
+			          "Target": {
+			            "Entity": "f_KM_traveled"
+			          }
+			        },
+			        "entity_3rd_calculation.YoY_profit": {
+			          "Target": {
+			            "Entity": "entity_3rd_calculation.YoY_profit"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "f_KM_traveled"
+			            },
+			            "Object": {
+			              "Role": "entity_3rd_calculation.YoY_profit"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "f_KM_traveled_have_YoY_profit"
+			        }
+			      ]
+			    },
+			    "f_freight_has_entity_3rd_calculation_YoY_profit": {
+			      "Binding": {
+			        "ConceptualEntity": "fFreight"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "f_freight": {
+			          "Target": {
+			            "Entity": "f_freight"
+			          }
+			        },
+			        "entity_3rd_calculation.YoY_profit": {
+			          "Target": {
+			            "Entity": "entity_3rd_calculation.YoY_profit"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "f_freight"
+			            },
+			            "Object": {
+			              "Role": "entity_3rd_calculation.YoY_profit"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "f_freights_have_YoY_profit"
+			        }
+			      ]
+			    },
+			    "calendar_has_entity_3rd_calculation_YoY_profit": {
+			      "Binding": {
+			        "ConceptualEntity": "Calendar"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "calendar": {
+			          "Target": {
+			            "Entity": "calendar"
+			          }
+			        },
+			        "entity_3rd_calculation.YoY_profit": {
+			          "Target": {
+			            "Entity": "entity_3rd_calculation.YoY_profit"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "calendar"
+			            },
+			            "Object": {
+			              "Role": "entity_3rd_calculation.YoY_profit"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "calendars_have_YoY_profit"
+			        }
+			      ]
+			    },
+			    "f_freight_has_entity_3rd_calculation_qty_delivery": {
+			      "Binding": {
+			        "ConceptualEntity": "fFreight"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "f_freight": {
+			          "Target": {
+			            "Entity": "f_freight"
+			          }
+			        },
+			        "entity_3rd_calculation.qty_delivery": {
+			          "Target": {
+			            "Entity": "entity_3rd_calculation.qty_delivery"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "f_freight"
+			            },
+			            "Object": {
+			              "Role": "entity_3rd_calculation.qty_delivery"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "f_freights_have_qty_delivery"
+			        }
+			      ]
+			    },
+			    "f_KM_traveled_has_entity_2nd_calculation_COLOR_trucks_used": {
+			      "Binding": {
+			        "ConceptualEntity": "fKMTraveled"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "f_KM_traveled": {
+			          "Target": {
+			            "Entity": "f_KM_traveled"
+			          }
+			        },
+			        "entity_2nd_calculation.COLOR_trucks_used": {
+			          "Target": {
+			            "Entity": "entity_2nd_calculation.COLOR_trucks_used"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "f_KM_traveled"
+			            },
+			            "Object": {
+			              "Role": "entity_2nd_calculation.COLOR_trucks_used"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "f_KM_traveled_have_COLOR_trucks_used"
+			        }
+			      ]
+			    },
+			    "f_KM_traveled_has_entity_2nd_calculation_COLOR_cost_per_ton": {
+			      "Binding": {
+			        "ConceptualEntity": "fKMTraveled"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "f_KM_traveled": {
+			          "Target": {
+			            "Entity": "f_KM_traveled"
+			          }
+			        },
+			        "entity_2nd_calculation.COLOR_cost_per_ton": {
+			          "Target": {
+			            "Entity": "entity_2nd_calculation.COLOR_cost_per_ton"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "f_KM_traveled"
+			            },
+			            "Object": {
+			              "Role": "entity_2nd_calculation.COLOR_cost_per_ton"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "f_KM_traveled_have_COLOR_cost_per_ton"
+			        },
+			        {
+			          "Adjective": {
+			            "Subject": {
+			              "Role": "f_KM_traveled"
+			            },
+			            "Adjectives": [
+			              {
+			                "expensive": {
+			                  "State": "Generated"
+			                }
+			              }
+			            ],
+			            "Antonyms": [
+			              {
+			                "cheap": {
+			                  "State": "Generated"
+			                }
+			              }
+			            ],
+			            "Measurement": {
+			              "Role": "entity_2nd_calculation.COLOR_cost_per_ton"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "COLOR_cost_per_ton_indicates_how_expensive_f_KM_traveled_are"
+			        }
+			      ]
+			    },
+			    "f_freight_has_entity_2nd_calculation_COLOR_cost_per_ton": {
+			      "Binding": {
+			        "ConceptualEntity": "fFreight"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "f_freight": {
+			          "Target": {
+			            "Entity": "f_freight"
+			          }
+			        },
+			        "entity_2nd_calculation.COLOR_cost_per_ton": {
+			          "Target": {
+			            "Entity": "entity_2nd_calculation.COLOR_cost_per_ton"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "f_freight"
+			            },
+			            "Object": {
+			              "Role": "entity_2nd_calculation.COLOR_cost_per_ton"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "f_freights_have_COLOR_cost_per_ton"
+			        },
+			        {
+			          "Adjective": {
+			            "Subject": {
+			              "Role": "f_freight"
+			            },
+			            "Adjectives": [
+			              {
+			                "expensive": {
+			                  "State": "Generated"
+			                }
+			              }
+			            ],
+			            "Antonyms": [
+			              {
+			                "cheap": {
+			                  "State": "Generated"
+			                }
+			              }
+			            ],
+			            "Measurement": {
+			              "Role": "entity_2nd_calculation.COLOR_cost_per_ton"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "COLOR_cost_per_ton_indicates_how_expensive_f_freights_are"
+			        }
+			      ]
+			    },
+			    "f_KM_traveled_has_entity_2nd_calculation_COLOR_cost_per_KM": {
+			      "Binding": {
+			        "ConceptualEntity": "fKMTraveled"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "f_KM_traveled": {
+			          "Target": {
+			            "Entity": "f_KM_traveled"
+			          }
+			        },
+			        "entity_2nd_calculation.COLOR_cost_per_KM": {
+			          "Target": {
+			            "Entity": "entity_2nd_calculation.COLOR_cost_per_KM"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "f_KM_traveled"
+			            },
+			            "Object": {
+			              "Role": "entity_2nd_calculation.COLOR_cost_per_KM"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "f_KM_traveled_have_COLOR_cost_per_KM"
+			        },
+			        {
+			          "Adjective": {
+			            "Subject": {
+			              "Role": "f_KM_traveled"
+			            },
+			            "Adjectives": [
+			              {
+			                "expensive": {
+			                  "State": "Generated"
+			                }
+			              }
+			            ],
+			            "Antonyms": [
+			              {
+			                "cheap": {
+			                  "State": "Generated"
+			                }
+			              }
+			            ],
+			            "Measurement": {
+			              "Role": "entity_2nd_calculation.COLOR_cost_per_KM"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "COLOR_cost_per_KM_indicates_how_expensive_f_KM_traveled_are"
+			        }
+			      ]
+			    },
+			    "f_KM_traveled_has_entity_2nd_calculation_COLOR_total_cost": {
+			      "Binding": {
+			        "ConceptualEntity": "fKMTraveled"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "f_KM_traveled": {
+			          "Target": {
+			            "Entity": "f_KM_traveled"
+			          }
+			        },
+			        "entity_2nd_calculation.COLOR_total_cost": {
+			          "Target": {
+			            "Entity": "entity_2nd_calculation.COLOR_total_cost"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "f_KM_traveled"
+			            },
+			            "Object": {
+			              "Role": "entity_2nd_calculation.COLOR_total_cost"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "f_KM_traveled_have_COLOR_total_cost"
+			        },
+			        {
+			          "Adjective": {
+			            "Subject": {
+			              "Role": "f_KM_traveled"
+			            },
+			            "Adjectives": [
+			              {
+			                "expensive": {
+			                  "State": "Generated"
+			                }
+			              }
+			            ],
+			            "Antonyms": [
+			              {
+			                "cheap": {
+			                  "State": "Generated"
+			                }
+			              }
+			            ],
+			            "Measurement": {
+			              "Role": "entity_2nd_calculation.COLOR_total_cost"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "COLOR_total_cost_indicates_how_expensive_f_KM_traveled_are"
+			        }
+			      ]
+			    },
+			    "f_KM_traveled_has_entity_2nd_calculation_YoY_trucks_used": {
+			      "Binding": {
+			        "ConceptualEntity": "fKMTraveled"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "f_KM_traveled": {
+			          "Target": {
+			            "Entity": "f_KM_traveled"
+			          }
+			        },
+			        "entity_2nd_calculation.YoY_trucks_used": {
+			          "Target": {
+			            "Entity": "entity_2nd_calculation.YoY_trucks_used"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "f_KM_traveled"
+			            },
+			            "Object": {
+			              "Role": "entity_2nd_calculation.YoY_trucks_used"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "f_KM_traveled_have_YoY_trucks_used"
+			        }
+			      ]
+			    },
+			    "calendar_has_entity_2nd_calculation_YoY_trucks_used": {
+			      "Binding": {
+			        "ConceptualEntity": "Calendar"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "calendar": {
+			          "Target": {
+			            "Entity": "calendar"
+			          }
+			        },
+			        "entity_2nd_calculation.YoY_trucks_used": {
+			          "Target": {
+			            "Entity": "entity_2nd_calculation.YoY_trucks_used"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "calendar"
+			            },
+			            "Object": {
+			              "Role": "entity_2nd_calculation.YoY_trucks_used"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "calendars_have_YoY_trucks_used"
+			        }
+			      ]
+			    },
+			    "f_KM_traveled_has_entity_2nd_calculation_YoY_cost_per_ton": {
+			      "Binding": {
+			        "ConceptualEntity": "fKMTraveled"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "f_KM_traveled": {
+			          "Target": {
+			            "Entity": "f_KM_traveled"
+			          }
+			        },
+			        "entity_2nd_calculation.YoY_cost_per_ton": {
+			          "Target": {
+			            "Entity": "entity_2nd_calculation.YoY_cost_per_ton"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "f_KM_traveled"
+			            },
+			            "Object": {
+			              "Role": "entity_2nd_calculation.YoY_cost_per_ton"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "f_KM_traveled_have_YoY_cost_per_ton"
+			        }
+			      ]
+			    },
+			    "f_freight_has_entity_2nd_calculation_YoY_cost_per_ton": {
+			      "Binding": {
+			        "ConceptualEntity": "fFreight"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "f_freight": {
+			          "Target": {
+			            "Entity": "f_freight"
+			          }
+			        },
+			        "entity_2nd_calculation.YoY_cost_per_ton": {
+			          "Target": {
+			            "Entity": "entity_2nd_calculation.YoY_cost_per_ton"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "f_freight"
+			            },
+			            "Object": {
+			              "Role": "entity_2nd_calculation.YoY_cost_per_ton"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "f_freights_have_YoY_cost_per_ton"
+			        }
+			      ]
+			    },
+			    "calendar_has_entity_2nd_calculation_YoY_cost_per_ton": {
+			      "Binding": {
+			        "ConceptualEntity": "Calendar"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "calendar": {
+			          "Target": {
+			            "Entity": "calendar"
+			          }
+			        },
+			        "entity_2nd_calculation.YoY_cost_per_ton": {
+			          "Target": {
+			            "Entity": "entity_2nd_calculation.YoY_cost_per_ton"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "calendar"
+			            },
+			            "Object": {
+			              "Role": "entity_2nd_calculation.YoY_cost_per_ton"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "calendars_have_YoY_cost_per_ton"
+			        }
+			      ]
+			    },
+			    "f_KM_traveled_has_entity_2nd_calculation_YoY_cost_per_KM": {
+			      "Binding": {
+			        "ConceptualEntity": "fKMTraveled"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "f_KM_traveled": {
+			          "Target": {
+			            "Entity": "f_KM_traveled"
+			          }
+			        },
+			        "entity_2nd_calculation.YoY_cost_per_KM": {
+			          "Target": {
+			            "Entity": "entity_2nd_calculation.YoY_cost_per_KM"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "f_KM_traveled"
+			            },
+			            "Object": {
+			              "Role": "entity_2nd_calculation.YoY_cost_per_KM"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "f_KM_traveled_have_YoY_cost_per_KM"
+			        }
+			      ]
+			    },
+			    "calendar_has_entity_2nd_calculation_YoY_cost_per_KM": {
+			      "Binding": {
+			        "ConceptualEntity": "Calendar"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "calendar": {
+			          "Target": {
+			            "Entity": "calendar"
+			          }
+			        },
+			        "entity_2nd_calculation.YoY_cost_per_KM": {
+			          "Target": {
+			            "Entity": "entity_2nd_calculation.YoY_cost_per_KM"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "calendar"
+			            },
+			            "Object": {
+			              "Role": "entity_2nd_calculation.YoY_cost_per_KM"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "calendars_have_YoY_cost_per_KM"
+			        }
+			      ]
+			    },
 			    "f_KM_traveled_has_entity_3rd_calculation_PROFIT_ton": {
 			      "Binding": {
 			        "ConceptualEntity": "fKMTraveled"
@@ -9460,6 +11803,138 @@ cultureInfo en-US
 			          "State": "Generated",
 			          "Weight": 0.99,
 			          "ID": "d_clientes_are_in_cities"
+			        }
+			      ]
+			    },
+			    "f_KM_traveled_has_entity_3rd_calculation_color_profit": {
+			      "Binding": {
+			        "ConceptualEntity": "fKMTraveled"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "f_KM_traveled": {
+			          "Target": {
+			            "Entity": "f_KM_traveled"
+			          }
+			        },
+			        "entity_3rd_calculation.color_profit": {
+			          "Target": {
+			            "Entity": "entity_3rd_calculation.color_profit"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "f_KM_traveled"
+			            },
+			            "Object": {
+			              "Role": "entity_3rd_calculation.color_profit"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "f_KM_traveled_have_color_profit"
+			        }
+			      ]
+			    },
+			    "f_freight_has_entity_3rd_calculation_color_qty_traveled": {
+			      "Binding": {
+			        "ConceptualEntity": "fFreight"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "f_freight": {
+			          "Target": {
+			            "Entity": "f_freight"
+			          }
+			        },
+			        "entity_3rd_calculation.color_qty_traveled": {
+			          "Target": {
+			            "Entity": "entity_3rd_calculation.color_qty_traveled"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "f_freight"
+			            },
+			            "Object": {
+			              "Role": "entity_3rd_calculation.color_qty_traveled"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "f_freights_have_color_qty_traveled"
+			        }
+			      ]
+			    },
+			    "f_KM_traveled_has_entity_3rd_calculation_color_km_traveled": {
+			      "Binding": {
+			        "ConceptualEntity": "fKMTraveled"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "f_KM_traveled": {
+			          "Target": {
+			            "Entity": "f_KM_traveled"
+			          }
+			        },
+			        "entity_3rd_calculation.color_km_traveled": {
+			          "Target": {
+			            "Entity": "entity_3rd_calculation.color_km_traveled"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "f_KM_traveled"
+			            },
+			            "Object": {
+			              "Role": "entity_3rd_calculation.color_km_traveled"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "f_KM_traveled_have_color_km_traveled"
+			        }
+			      ]
+			    },
+			    "f_freight_has_entity_3rd_calculation_color_weghit_traveled": {
+			      "Binding": {
+			        "ConceptualEntity": "fFreight"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "f_freight": {
+			          "Target": {
+			            "Entity": "f_freight"
+			          }
+			        },
+			        "entity_3rd_calculation.color_weghit_traveled": {
+			          "Target": {
+			            "Entity": "entity_3rd_calculation.color_weghit_traveled"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "f_freight"
+			            },
+			            "Object": {
+			              "Role": "entity_3rd_calculation.color_weghit_traveled"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "f_freights_have_color_weghit_traveled"
 			        }
 			      ]
 			    },

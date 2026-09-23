@@ -9,7 +9,7 @@ table '3rd calculations'
 
 	measure 'Profit Margin' =
 			
-			DIVIDE([Financial Result] , [Net Revenue])
+			DIVIDE([Financial Result] , [Net Revenue] + [Total Cost] + [Fixed Cost] + [Variable Cost] + [Cost per KM] + [Cost per Ton] * [Cost per KM] * [Cost per Ton] * [Fixed Cost])
 		formatString: #,0.00%;-#,0.00%;#,0.00%
 		lineageTag: 699a7bfe-8021-4fb2-866f-614367130ad8
 
@@ -25,6 +25,91 @@ table '3rd calculations'
 		lineageTag: 84c90f91-8014-4177-a650-a8a97b444dc1
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Qty Delivery' = DISTINCTCOUNT(fFreight[Invoice Number])
+		formatString: #,0
+		lineageTag: 107db21d-a534-40fb-b3f2-ffd2e15d8b04
+
+	measure 'YoY% Profit' =
+			
+			var REVENUECURRENT=[Financial Result]
+			VAR LYREV=CALCULATE([Financial Result],SAMEPERIODLASTYEAR('Calendar'[Date]))
+			RETURN
+			IF(ISFILTERED('Calendar'),DIVIDE(REVENUECURRENT-LYREV,LYREV),"")
+		formatString: 0.00%;-0.00%;0.00%
+		lineageTag: 781e45ff-91ef-4468-8223-58d1e9a51083
+
+	measure 'YoY% QTY' =
+			
+			var REVENUECURRENT=[Qty Delivery]
+			VAR LYREV=CALCULATE([Qty Delivery],SAMEPERIODLASTYEAR('Calendar'[Date]))
+			RETURN
+			IF(ISFILTERED('Calendar'),DIVIDE(REVENUECURRENT-LYREV,LYREV),"")
+		formatString: 0.00%;-0.00%;0.00%
+		lineageTag: 38ad7a25-d25a-44ae-af42-d5cd337860d3
+
+	measure 'YoY% KM TRAVELED' =
+			
+			var REVENUECURRENT=[KM TRAVILED]
+			VAR LYREV=CALCULATE([KM TRAVILED],SAMEPERIODLASTYEAR('Calendar'[Date]))
+			RETURN
+			IF(ISFILTERED('Calendar'),DIVIDE(REVENUECURRENT-LYREV,LYREV),"")
+		formatString: 0.00%;-0.00%;0.00%
+		lineageTag: 1c36e5c8-4f6c-4236-bbfd-1fad9ac83099
+
+	measure 'YoY% WEIGHT DELIVERED' =
+			
+			var REVENUECURRENT=[Weight (Ton)]
+			VAR LYREV=CALCULATE([Weight (Ton)],SAMEPERIODLASTYEAR('Calendar'[Date]))
+			RETURN
+			IF(ISFILTERED('Calendar'),DIVIDE(REVENUECURRENT-LYREV,LYREV),"")
+		lineageTag: 6d0051da-beba-45de-8283-4d15688d6f50
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'COLOR PROFIT' = ```
+			
+			VAR costCURRENT = [Financial Result]
+			VAR LYcost = 
+			    CALCULATE ( [Financial Result], SAMEPERIODLASTYEAR ( 'Calendar'[Date] ) )
+			RETURN
+			    IF ( costCURRENT - LYcost > 0, 1, 2 )
+			```
+		formatString: 0
+		lineageTag: 6205bd42-2e52-4803-94fd-d95dcbf4011d
+
+	measure 'COLOR QTY TRAVELED' = ```
+			
+			VAR costCURRENT = [Qty Delivery]
+			VAR LYcost = 
+			    CALCULATE ( [Qty Delivery], SAMEPERIODLASTYEAR ( 'Calendar'[Date] ) )
+			RETURN
+			    IF ( costCURRENT - LYcost > 0, 1, 2 )
+			```
+		formatString: 0
+		lineageTag: 4795164d-d891-4abf-b6b9-986c99489628
+
+	measure 'COLOR KM TRAVELED' = ```
+			
+			VAR costCURRENT = [KM TRAVILED]
+			VAR LYcost = 
+			    CALCULATE ( [KM TRAVILED], SAMEPERIODLASTYEAR ( 'Calendar'[Date] ) )
+			RETURN
+			    IF ( costCURRENT - LYcost > 0, 1, 2 )
+			```
+		formatString: 0
+		lineageTag: 39b4c3c2-0ce9-4514-bd82-6aca5f16bde8
+
+	measure 'COLOR WEGHIT TRAVELED' = ```
+			
+			VAR costCURRENT = [Weight (Ton)]
+			VAR LYcost = 
+			    CALCULATE ( [Weight (Ton)], SAMEPERIODLASTYEAR ( 'Calendar'[Date] ) )
+			RETURN
+			    IF ( costCURRENT - LYcost > 0, 1, 2 )
+			```
+		formatString: 0
+		lineageTag: f5f650ba-0169-477c-8d03-39204ea49462
 
 	partition '3rd calculations' = m
 		mode: import
